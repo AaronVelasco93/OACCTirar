@@ -16,7 +16,7 @@ CREATE TABLE `ESTUDIANTE`(
     `numero_cuenta` int (9) not null,
     `telefono` varchar (8) not null,
     `permisos` int (2) not null default '1',
-    `fecha_registro` datetime no null default current_timestamp
+    `fecha_registro` datetime not null default current_timestamp
 
 ) ENGINE=InnoDB DEFAULT CHARSET= utf8;
 
@@ -29,7 +29,7 @@ INSERT INTO `ESTUDIANTE`(  `nombre_alumno`,`carrera`, `numero_cuenta`,  `telefon
 
 /*definimos una llave primaria o PK*/
 
-alter table 'ESTUDIANTE'
+alter table `ESTUDIANTE`
     add primary key (`numero_cuenta`);
 
 
