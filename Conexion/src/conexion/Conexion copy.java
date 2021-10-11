@@ -36,17 +36,17 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
             
             //Definir la url de donde esta nuestra DB
-            host= "jdbc:mysql://127.0.0.1:3306/";//127.0.0.1
+            host= "jdbc:mysql://127.0.0.1:3308/";//127.0.0.1
             //el nombre de mi base de datos
             dbName= "alumnos_ico";
             
             //Extablecemos nuestra conexion
             
-            Connection db = DriverManager.getConnection( host + dbName, "root","123456" );
+            Connection db = DriverManager.getConnection( host + dbName, "root","" );
             
             Statement st = db.createStatement();
             
-            ResultSet  rs =st.executeQuery("SELECT * FROM productos");
+            ResultSet  rs =st.executeQuery("SELECT * FROM estudiante");
             
             
             if(rs.wasNull())
